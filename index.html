@@ -11,17 +11,19 @@
   <style>
     :root {
       --primary: #008744;
-      --primary-dark: #006633;
+      --primary-dark: #005a2b;
       --primary-light: #e8f5e9;
-      --accent: #fbb03b;
-      --accent-dark: #d9911e;
-      --bg-page: #f4f7f5;
+      --gold: #d4af37;
+      --gold-dark: #b48312;
+      --gold-light: #fef9c3;
+      --gold-soft: #fefce8;
+      --bg-page: #f4f7f4;
       --bg-card: #ffffff;
-      --text-heading: #064e26;
-      --text-body: #334155;
-      --text-muted: #64748b;
-      --border-color: #d1e7dd;
-      --ticker-bg: #034421;
+      --text-heading: #033c1d;
+      --text-body: #2d3748;
+      --text-muted: #5a6b5c;
+      --border-color: #e2dbbe;
+      --ticker-bg: #022b16;
       --ticker-text: #ffffff;
     }
 
@@ -39,7 +41,7 @@
       font-size: 17px;
     }
 
-    /* TOP LIVE TICKER */
+    /* TOP LIVE TICKER (GREEN & GOLD) */
     .ticker-bar {
       width: 100%;
       background: var(--ticker-bg);
@@ -49,12 +51,12 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 3px 12px rgba(0, 77, 37, 0.25);
-      border-bottom: 3px solid var(--accent);
+      box-shadow: 0 3px 14px rgba(2, 43, 22, 0.35);
+      border-bottom: 3px solid var(--gold);
     }
     .ticker-wrapper {
       display: inline-block;
-      padding: 10px 0;
+      padding: 11px 0;
       animation: tickerScroll 30s linear infinite;
     }
     .ticker-wrapper:hover {
@@ -72,50 +74,54 @@
       font-weight: 600;
     }
     .ticker-tag {
-      background: var(--accent);
-      color: #064e26;
-      padding: 3px 10px;
+      background: linear-gradient(135deg, #d4af37, #f59e0b);
+      color: #022b16;
+      padding: 4px 12px;
       border-radius: 4px;
       font-size: 12px;
       text-transform: uppercase;
-      font-weight: 800;
+      font-weight: 900;
+      letter-spacing: 0.04em;
     }
     .ticker-date {
-      color: var(--accent);
+      color: #fde047;
       font-weight: 700;
     }
 
-    /* BRAND HERO */
+    /* BRAND HERO (GREEN & GOLD GRADIENT) */
     .brand-hero {
-      background: linear-gradient(135deg, #008744 0%, #006633 100%);
+      background: linear-gradient(135deg, #005a2b 0%, #008744 60%, #033c1d 100%);
       color: #ffffff;
-      padding: 26px 16px;
+      padding: 30px 16px;
       text-align: center;
-      border-bottom: 4px solid var(--accent);
+      border-bottom: 4px solid var(--gold);
+      box-shadow: 0 4px 15px rgba(0, 90, 43, 0.15);
     }
     .brand-pill {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       background: #ffffff;
       color: #008744;
-      padding: 6px 18px;
+      padding: 7px 22px;
       border-radius: 50px;
       font-weight: 800;
-      font-size: 1.15rem;
-      margin-bottom: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      font-size: 1.18rem;
+      margin-bottom: 12px;
+      border: 2px solid var(--gold);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
     }
     .brand-badge {
-      background: var(--accent);
-      color: #064e26;
-      padding: 2px 8px;
+      background: linear-gradient(135deg, #f59e0b, #d4af37);
+      color: #022b16;
+      padding: 3px 10px;
       border-radius: 6px;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       font-weight: 900;
+      letter-spacing: 0.05em;
     }
 
-    /* CONTAINER */
+    /* CONTAINER & MAIN ARTICLE */
     .container {
       max-width: 980px;
       margin: 35px auto 60px auto;
@@ -126,7 +132,7 @@
       border: 1px solid var(--border-color);
       border-radius: 16px;
       padding: 48px;
-      box-shadow: 0 10px 35px rgba(0, 135, 68, 0.05);
+      box-shadow: 0 10px 35px rgba(0, 135, 68, 0.06);
     }
 
     header.article-header {
@@ -153,17 +159,17 @@
 
     h2 {
       font-size: 1.68rem;
-      color: #064e26;
+      color: #006b35;
       margin-top: 48px;
       margin-bottom: 18px;
-      border-left: 5px solid var(--primary);
+      border-left: 5px solid var(--gold);
       padding-left: 14px;
       line-height: 1.35;
       font-weight: 700;
     }
     h3 {
       font-size: 1.28rem;
-      color: #1e3a8a;
+      color: #034421;
       margin-top: 28px;
       margin-bottom: 12px;
       font-weight: 600;
@@ -171,7 +177,7 @@
     p {
       margin-bottom: 22px;
       text-align: justify;
-      color: #374151;
+      color: #2d3748;
     }
     ul, ol {
       margin-left: 28px;
@@ -179,7 +185,7 @@
     }
     li {
       margin-bottom: 10px;
-      color: #374151;
+      color: #2d3748;
     }
 
     /* IMAGES */
@@ -203,28 +209,35 @@
       font-weight: 500;
     }
 
-    /* THE SINGLE ANCHOR */
+    /* THE SINGLE ANCHOR (GREEN & GOLD) */
     .single-anchor {
-      color: var(--primary);
+      color: #007a3d;
       font-weight: 800;
-      text-decoration: underline;
-      transition: color 0.2s ease;
+      text-decoration: underline 3px solid var(--gold);
+      text-underline-offset: 4px;
+      transition: all 0.2s ease;
     }
     .single-anchor:hover {
-      color: var(--primary-dark);
+      color: var(--gold-dark);
+      text-decoration-color: #007a3d;
     }
 
-    /* CALLOUT & TABLES */
+    /* CALLOUT (GOLD ACCENT) */
     .callout-box {
-      background: var(--primary-light);
-      border-left: 4px solid var(--primary);
+      background: var(--gold-soft);
+      border-left: 5px solid var(--gold);
       padding: 22px 26px;
       margin: 28px 0;
       border-radius: 0 12px 12px 0;
+      border-top: 1px solid #fef08a;
+      border-bottom: 1px solid #fef08a;
+      border-right: 1px solid #fef08a;
     }
     .callout-box strong {
-      color: var(--primary-dark);
+      color: #78350f;
     }
+
+    /* STYLED TABLE (GREEN & GOLD HEADER) */
     .styled-table {
       width: 100%;
       border-collapse: collapse;
@@ -237,18 +250,20 @@
       text-align: left;
     }
     .styled-table th {
-      background: #e8f5e9;
-      color: #064e26;
+      background: linear-gradient(135deg, #005a2b, #008744);
+      color: #fef9c3;
       font-weight: 700;
+      border-bottom: 2px solid var(--gold);
     }
     .styled-table tr:nth-child(even) {
-      background: #f9fbf9;
+      background: #fbfdfb;
     }
 
-    /* FAQS */
+    /* FAQS (GREEN & GOLD BORDER) */
     .faq-item {
       background: #ffffff;
       border: 1px solid var(--border-color);
+      border-left: 4px solid var(--gold);
       border-radius: 10px;
       padding: 22px 26px;
       margin-bottom: 22px;
@@ -257,14 +272,14 @@
     .faq-q {
       font-size: 1.15rem;
       font-weight: 700;
-      color: var(--text-heading);
+      color: #006b35;
       margin-bottom: 10px;
     }
 
     footer {
       margin-top: 60px;
       padding-top: 30px;
-      border-top: 1px solid var(--border-color);
+      border-top: 2px solid var(--gold);
       text-align: center;
       font-size: 0.92rem;
       color: var(--text-muted);
